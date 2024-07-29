@@ -46,6 +46,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <style id='wp-emoji-styles-inline-css' type='text/css'>
 
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+	height: 90% !important;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* end */
+
 	img.wp-smiley, img.emoji {
 		display: inline !important;
 		border: none !important;
@@ -797,23 +843,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <div class="container my-2 mb-4 mt-4">
       <div class="row">
                   <!-- component start -->
-         <div class="col-lg-4 col-md-6 p-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
-         <a href="#">
-            <div class="card rounded text-white border-0 our_solution_card">
-               <img src="wp-content/uploads/2023/08/MEP-1.jpg" class="card-img" alt="...">
-               <div class="card-img-overlay our-sol-card-inner">
-                  <h4 class="card-title mb-3">
-					Civil Contracting                  </h4>
-                  <div class="card-text">
-                     <p>Design, engineering, installation, testing &amp; commissioning, and maintenance of electromechanical systems.</p>
-                  </div>
-                  <span class="sol-btn">
-                  <img src="wp-content/themes/tte/assets/images/plus-fill.png" class="plus-btn">
-                  </span>
-               </div>
+				  <div class="col-lg-4 col-md-6 p-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+    <a href="#">
+        <div class="card rounded text-white border-0 our_solution_card">
+            <img src="wp-content/uploads/2023/08/MEP-1.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay our-sol-card-inner">
+                <h4 class="card-title mb-3">Civil Contracting</h4>
+                <div class="card-text">
+                    <p>Design, engineering, installation, testing &amp; commissioning, and maintenance of electromechanical systems.</p>
+                </div>
+                <span class="sol-btn">
+                    <img src="wp-content/themes/tte/assets/images/plus-fill.png" class="plus-btn">
+                </span>
             </div>
-            </a>
-         </div>
+        </div>
+    </a>
+</div>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+
          <!--ends-->
                   <!-- component start -->
          <div class="col-lg-4 col-md-6 p-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
@@ -3501,4 +3554,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    
    });
 </script>
+<script>
+    // Get the modal
+    var modal = document.getElementById("imageModal");
+
+    // Get all plus buttons and insert images inside the modal
+    var plusBtns = document.querySelectorAll(".plus-btn");
+    var modalImg = document.getElementById("modalImage");
+
+    // Variable to store the current scroll position
+    var scrollPosition = 0;
+
+    plusBtns.forEach(function(plusBtn) {
+        plusBtn.onclick = function() {
+            // Capture the current scroll position
+            scrollPosition = window.scrollY;
+
+            // Show the modal and add the class to prevent scrolling
+            var cardImg = this.closest(".card").querySelector(".card-img").src;
+            modal.style.display = "block";
+            modalImg.src = cardImg;
+            document.body.classList.add("modal-open");
+
+            // Set the top position to keep the background in place
+            document.body.style.top = `-${scrollPosition}px`;
+        }
+    });
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        closeModal();
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+
+    function closeModal() {
+        // Hide the modal and remove the class to enable scrolling
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+
+        // Restore the scroll position
+        document.body.style.top = '';
+        window.scrollTo(0, scrollPosition);
+    }
+</script>
+
+
+
 <!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1720013703 -->

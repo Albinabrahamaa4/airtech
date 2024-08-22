@@ -1720,7 +1720,26 @@ electro-mechanical services across the Gulf region. Established to meet the grow
 		<script type="text/html" id="tmpl-attachment-display-settings">
 		<h2>Attachment Display Settings</h2>
 
-		
+		<# if ( 'image' === data.type ) { #>
+			<span class="setting align">
+				<label for="attachment-display-settings-alignment" class="name">Alignment</label>
+				<select id="attachment-display-settings-alignment" class="alignment"
+					data-setting="align"
+					<# if ( data.userSettings ) { #>
+						data-user-setting="align"
+					<# } #>>
+
+					<option value="left">
+						Left					</option>
+					<option value="center">
+						Center					</option>
+					<option value="right">
+						Right					</option>
+					<option value="none" selected>
+						None					</option>
+				</select>
+			</span>
+		<# } #>
 
 		<span class="setting">
 			<label for="attachment-display-settings-link-to" class="name">

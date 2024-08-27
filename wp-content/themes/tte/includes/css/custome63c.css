@@ -15,10 +15,10 @@
   }
 }
 label.form-label1 select {
-    height: 46px;
+  height: 46px;
 }
 .custom_links_row .row > div {
-  padding: 0 18px; 
+  padding: 0 18px;
 }
 .custom_links_row .row {
   margin: 0 -18px;
@@ -46,7 +46,7 @@ label.form-label1 select {
   height: 80px;
 }
 .footer-social {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 .custom_links_row .custom_link-card {
   background: #f3f3f3;
@@ -99,13 +99,19 @@ label.form-label1 select {
   width: 100%;
   height: auto;
 }
-.electro_mech_soln-section .mech_card_custom-slider .mech-slick-arrow.mech-prev {
+.electro_mech_soln-section
+  .mech_card_custom-slider
+  .mech-slick-arrow.mech-prev {
   left: -35px;
 }
-.electro_mech_soln-section .mech_card_custom-slider .mech-slick-arrow.mech-next {
+.electro_mech_soln-section
+  .mech_card_custom-slider
+  .mech-slick-arrow.mech-next {
   right: -35px;
 }
-.electro_mech_soln-section .mech_card_custom-slider .mech-slick-arrow.slick-disabled {
+.electro_mech_soln-section
+  .mech_card_custom-slider
+  .mech-slick-arrow.slick-disabled {
   opacity: 0.3;
 }
 .electro_mech_soln-section .mech_card_custom-slider .mech-slick-arrow {
@@ -743,7 +749,11 @@ label.form-label1 select {
   .electro_mech_soln-section .mech_card_custom-slider .mech-slick-arrow:hover {
     background: #53357f;
   }
-  .electro_mech_soln-section .mech_card_custom-slider .mech-slick-arrow:hover svg path {
+  .electro_mech_soln-section
+    .mech_card_custom-slider
+    .mech-slick-arrow:hover
+    svg
+    path {
     fill: #fff;
   }
   .animate_cards .card.rounded {
@@ -893,10 +903,14 @@ label.form-label1 select {
   .header_wrapper .navbar-dark .navbar-nav .nav-link.dropdown-toggle {
     padding: 1rem 1rem 0;
   }
-  .electro_mech_soln-section .mech_card_custom-slider .mech-slick-arrow.mech-prev {
+  .electro_mech_soln-section
+    .mech_card_custom-slider
+    .mech-slick-arrow.mech-prev {
     left: -30px;
   }
-  .electro_mech_soln-section .mech_card_custom-slider .mech-slick-arrow.mech-next {
+  .electro_mech_soln-section
+    .mech_card_custom-slider
+    .mech-slick-arrow.mech-next {
     right: -30px;
   }
 }
@@ -915,10 +929,14 @@ label.form-label1 select {
   .side-menu {
     display: none;
   }
-  .electro_mech_soln-section .mech_card_custom-slider .mech-slick-arrow.mech-prev {
+  .electro_mech_soln-section
+    .mech_card_custom-slider
+    .mech-slick-arrow.mech-prev {
     left: -10px;
   }
-  .electro_mech_soln-section .mech_card_custom-slider .mech-slick-arrow.mech-next {
+  .electro_mech_soln-section
+    .mech_card_custom-slider
+    .mech-slick-arrow.mech-next {
     right: -10px;
   }
 }
@@ -1001,8 +1019,7 @@ header .card > img.menu-image {
   max-height: 55px;
   width: auto;
 }
-.hasfootercon
-{
+.hasfootercon {
   justify-content: flex-end;
   display: flex;
 }
@@ -1010,7 +1027,8 @@ header .card > img.menu-image {
   object-fit: cover;
   object-position: center;
 }
-.pum-theme-7691 .pum-title, .pum-theme-lightbox .pum-title {
+.pum-theme-7691 .pum-title,
+.pum-theme-lightbox .pum-title {
   font-family: "Inter", sans-serif !important;
   font-weight: 600 !important;
   margin-bottom: 0 !important;
@@ -1019,107 +1037,111 @@ header .card > img.menu-image {
   margin-top: 20px;
 }
 .popmake-content .submit-btn1 {
-    height: 48px;
-    margin-top: 0px !important;
+  height: 48px;
+  margin-top: 0px !important;
 }
 .modal {
-    z-index: 19999999999;
+  z-index: 19999999999;
 }
 
 .modal-backdrop {
-     z-index: 1999999999;
+  z-index: 1999999999;
 }
-@media (min-width:991px)
-{
-	.pum-content.popmake-content {}
+@media (min-width: 991px) {
+  .pum-content.popmake-content {
+  }
 
-.pum-content.popmake-content label.form-label1 {
+  .pum-content.popmake-content label.form-label1 {
     width: 48%;
-}
+  }
 
-.pum-content.popmake-content .uacf7-form-491 {
+  .pum-content.popmake-content .uacf7-form-491 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+  }
 
-.pum-content.popmake-content .uacf7_conditional {
+  .pum-content.popmake-content .uacf7_conditional {
     width: 100%;
-}
+  }
 
-.pum-content.popmake-content label.form-label1.fullform {
+  .pum-content.popmake-content label.form-label1.fullform {
     width: 100%;
-}
+  }
 
-.pum-content.popmake-content .uacf7_conditional label.form-label1 {
+  .pum-content.popmake-content .uacf7_conditional label.form-label1 {
     width: 100%;
-}
-.popmake-content .has-btn {
+  }
+  .popmake-content .has-btn {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-}
+  }
 
-.popmake-content .has-btn span.wpcf7-spinner {
+  .popmake-content .has-btn span.wpcf7-spinner {
     position: absolute;
     right: -13px;
     top: 36%;
-}
-.all-projects,
-.banner-section.about-us{
+  }
+  .all-projects,
+  .banner-section.about-us {
     background-position: bottom !important;
     padding-top: 220px !important;
+  }
 }
-}
-@media (min-width:1200px) and (max-width:1400px)
-{
-	.navbar-expand-lg {
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .navbar-expand-lg {
     padding: 18px 0 !important;
-}
-	#menu-main-menu .dropdown-menu {
+  }
+  #menu-main-menu .dropdown-menu {
     top: 82px !important;
-}
-	.nav_search-toggle_btn {
+  }
+  .nav_search-toggle_btn {
     top: 36px !important;
+  }
 }
-}
-@media (max-width:767px)
-{
-.popmake-content .submit-btn1 {
+@media (max-width: 767px) {
+  .popmake-content .submit-btn1 {
     margin-top: 0px !important;
-}
+  }
 }
 .simrow {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 540px){
-.wpcf7-form.spam .wpcf7-response-output {
+@media screen and (max-width: 540px) {
+  .wpcf7-form.spam .wpcf7-response-output {
     top: 12.2rem;
-}
+  }
 
-.newsletter-footer {
+  .newsletter-footer {
     padding-bottom: 4rem;
-}
-.header-hero-section video {
+  }
+  .header-hero-section video {
     width: 100%;
     height: auto;
     transform: initial;
     top: 0;
     left: 0;
     min-height: auto;
-}
+  }
 
-section.header-hero-section {height: auto;min-height: 26vh;margin-top: 71px;}
+  section.header-hero-section {
+    height: auto;
+    min-height: 26vh;
+    margin-top: 71px;
+  }
 
-.home-hero-heading {
+  .home-hero-heading {
     font-size: 24px !important;
+  }
+
+  .header-hero-section .container {
+    margin-top: 50px;
+  }
 }
 
-.header-hero-section .container {
-    margin-top: 50px;
-}
-}
+

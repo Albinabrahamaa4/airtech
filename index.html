@@ -51,44 +51,100 @@ body.modal-open {
 }
 
 /* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 60px;
-    left: 0;
+
+.popup-overlay {
+    position: fixed; 
     top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); 
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+
+.popup-container {
+    position: relative; 
+    width: 80vw; 
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.popup-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10001; 
+    height: 70vh;
+}
+
+.popup-close-btn {
+    position: absolute;
+    bottom: 34rem;
+    right: 19rem;
+    background: rgba(255, 255, 255, 0.7); 
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10002; 
+}
+
+.popup-close-btn:hover {
+    background: rgba(255, 255, 255, 0.9); 
+}
+
+/* end */
+
+/* Card styles */
+.solution-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.solution-card-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.solution-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-	height: 90% !important;
-    max-width: 700px;
+.solution-card:hover .solution-card-overlay {
+    opacity: 1;
 }
 
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
+.enlarge-btn {
+    margin-top: 10px;
     cursor: pointer;
 }
+
+/* Overlay styles */
+
 
 /* end */
 
@@ -527,27 +583,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="col-lg-3">
 <h6>Our Profile</h6>
 <ul class="list-unstyled">
- 	<li><a href="#" target="_blank" rel="noopener"> ESAG </a></li>
- 	<li><a href="#"> Industries </a></li>
- 	<li><a href="#"> Clients </a></li>
- 	<li><a href="#"> Key Brands </a></li>
- 	<li><a href="#"> Strengths </a></li>
- 	<li><a href="#" target="_blank" rel="noopener"> Careers </a></li>
+ 	<li><a href="about/index.html" target="_blank" rel="noopener"> ESAG </a></li>
+ 	<li><a href="about/index.html"> Industries </a></li>
+ 	<li><a href="about/index.html"> Clients </a></li>
+ 	<li><a href="about/index.html"> Key Brands </a></li>
+ 	<li><a href="about/index.html"> Strengths </a></li>
+ 	<li><a href="about/index.html" target="_blank" rel="noopener"> Careers </a></li>
 </ul>
 </div>
 <div class="col-lg-3 p-0">
 <h6>Sustainability &amp; CSR</h6>
 <ul class="list-unstyled">
- 	<li><a href="#"> QHSE </a></li>
- 	<li><a href="#"> Sustainability </a></li>
- 	<li><a href="#"> CSR </a></li>
+ 	<li><a href="about/index.html"> QHSE </a></li>
+ 	<li><a href="about/index.html"> Sustainability </a></li>
+ 	<li><a href="about/index.html"> CSR </a></li>
 </ul>
 </div>
 <div class="col-lg-3 p-0">
 <h6>Infrastructure</h6>
 <ul class="list-unstyled">
- 	<li><a href="#"> News </a></li>
- 	<li><a href="#"> Media </a></li>
+ 	<li><a href="about/index.html"> News </a></li>
+ 	<li><a href="about/index.html"> Media </a></li>
 </ul>
 </div>
 <div class="col-lg-3 p-0">
@@ -566,7 +622,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="row">               <div class="col-lg-6">
                <div class="card h-100">
                     <img width="828" height="442" src="wp-content/uploads/2022/08/about-1.png" class="img-fluid card-img-top wp-post-image" alt="" decoding="async" srcset="wp-content/uploads/2022/08/about-1.png 828w, wp-content/uploads/2022/08/about-1.png 300w, wp-content/uploads/2022/08/about-1.png 768w" sizes="(max-width: 828px) 100vw, 828px" />                    <div class="card-body">
-                         <a class="btn btn-outline-primary rounded-pill" href="#">Discover</a>
+                         <a class="btn btn-outline-primary rounded-pill" href="about/index.html">Discover</a>
                     </div>
                </div>
           </div>
@@ -574,7 +630,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                <div class="col-lg-6">
                <div class="card h-100">
                     <img width="828" height="442" src="wp-content/uploads/2022/08/about-2.png" class="img-fluid card-img-top wp-post-image" alt="" decoding="async" srcset="wp-content/uploads/2022/08/about-2.png 828w, wp-content/uploads/2022/08/about-2.png 300w, wp-content/uploads/2022/08/about-2.png 768w" sizes="(max-width: 828px) 100vw, 828px" />                    <div class="card-body">                      
-                         <a class="btn btn-outline-primary rounded-pill" href="#">Discover</a>
+                         <a class="btn btn-outline-primary rounded-pill" href="about/index.html">Discover</a>
                     </div>
                </div>
           </div>
@@ -845,10 +901,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <div class="container my-2 mb-4 mt-4">
       <div class="row">
                   <!-- component start -->
-				  <div class="col-lg-4 col-md-6 p-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+				  <!-- Place this popup overlay directly under the body tag, outside of the card structure -->
+				  <div class="popup-overlay">
+    <div class="popup-container">
+        <button class="popup-close-btn">&times;</button>
+        <img src="" class="popup-image" alt="Popup Image">
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 p-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
     <a href="#">
         <div class="card rounded text-white border-0 our_solution_card">
-            <img src="wp-content/uploads/2023/08/MEP-1.jpg" class="card-img" alt="...">
+            <img src="wp-content/uploads/2023/08/centre-pompidou-blue-sky-sunlight-daytime-paris-france.jpg" class="card-img" alt="...">
             <div class="card-img-overlay our-sol-card-inner">
                 <h4 class="card-title mb-3">Civil Contracting</h4>
                 <div class="card-text">
@@ -862,11 +926,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
 </div>
 
-<!-- Modal -->
-<div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImage">
-</div>
 
 
          <!--ends-->
@@ -1307,7 +1366,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Featured Project item end -->
          </div>
       <div class="text-center py-5">
-      <a class="btn btn-outline-primary rounded-pill px-4" href="#">
+      <a class="btn btn-outline-primary rounded-pill px-4" href="projects/index.html">
       DISCOVER ALL      </a>
    </div>
 </section>
@@ -3556,58 +3615,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    
    });
 </script>
+
 <script>
-    // Get the modal
-    var modal = document.getElementById("imageModal");
+	// Get all plus buttons
+const plusButtons = document.querySelectorAll('.plus-btn');
+const popupOverlay = document.querySelector('.popup-overlay');
+const popupImage = document.querySelector('.popup-image');
+const closeBtn = document.querySelector('.popup-close-btn');
 
-    // Get all plus buttons and insert images inside the modal
-    var plusBtns = document.querySelectorAll(".plus-btn");
-    var modalImg = document.getElementById("modalImage");
+plusButtons.forEach((plusBtn) => {
+    plusBtn.addEventListener('click', (e) => {
+        e.preventDefault(); 
 
-    // Variable to store the current scroll position
-    var scrollPosition = 0;
+        const card = plusBtn.closest('.our_solution_card');
+        const imgSrc = card.querySelector('.card-img').src; 
 
-    plusBtns.forEach(function(plusBtn) {
-        plusBtn.onclick = function() {
-            // Capture the current scroll position
-            scrollPosition = window.scrollY;
-
-            // Show the modal and add the class to prevent scrolling
-            var cardImg = this.closest(".card").querySelector(".card-img").src;
-            modal.style.display = "block";
-            modalImg.src = cardImg;
-            document.body.classList.add("modal-open");
-
-            // Set the top position to keep the background in place
-            document.body.style.top = `-${scrollPosition}px`;
-        }
+        popupImage.src = imgSrc; 
+        popupOverlay.style.display = 'flex'; 
+        document.body.style.overflow = 'hidden'; 
     });
+});
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        closeModal();
+// Close the popup when clicking outside the image
+popupOverlay.addEventListener('click', (e) => {
+    if (e.target === popupOverlay) {
+        popupOverlay.style.display = 'none';
+        document.body.style.overflow = 'auto'; 
     }
+});
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            closeModal();
-        }
-    }
+// Close the popup when clicking the close button
+closeBtn.addEventListener('click', () => {
+    popupOverlay.style.display = 'none'; 
+    document.body.style.overflow = 'auto'; 
+});
 
-    function closeModal() {
-        // Hide the modal and remove the class to enable scrolling
-        modal.style.display = "none";
-        document.body.classList.remove("modal-open");
-
-        // Restore the scroll position
-        document.body.style.top = '';
-        window.scrollTo(0, scrollPosition);
-    }
-</script>
+	</script>
 
 
 

@@ -994,7 +994,7 @@ header .card > img.menu-image {
   height: calc(100% - 48px);
 }
 .nav-logo img {
-  max-height: 55px;
+  max-height: 80px;
   width: auto;
 }
 .hasfootercon {

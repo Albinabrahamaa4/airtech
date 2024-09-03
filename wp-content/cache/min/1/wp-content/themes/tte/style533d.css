@@ -40,9 +40,9 @@ h1 {
   max-height: 50px;
   margin: 5px 0;
 }
-.header-scrolled .logo-navbar img {
+/* .header-scrolled .logo-navbar img {
   filter: brightness(0);
-}
+} */
 .bg-purple {
   background-color: #53357f;
 }
@@ -3220,7 +3220,7 @@ p {
     width: 100%;
     position: fixed;
     padding: 1rem 3rem;
-    top: 5.1rem;
+    top: 6.1rem;
   }
   .navbar-expand-lg {
     padding-top: 20px;

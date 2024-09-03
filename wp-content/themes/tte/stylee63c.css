@@ -67,9 +67,9 @@ h1 {
 	max-height: 50px;
 	margin: 5px 0px;
 }
-.header-scrolled .logo-navbar img {
+/* .header-scrolled .logo-navbar img {
     filter: brightness(0);
-}
+} */
 .bg-purple {
 	background-color: #53357f;
 }

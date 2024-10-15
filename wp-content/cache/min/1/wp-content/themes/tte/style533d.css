@@ -433,6 +433,7 @@ section.about-section img {
 }
 #our-solution .our-sol-card-inner .card-text {
   min-height: 6rem;
+  margin-bottom: 30px;
 }
 #our-solution .our-sol-card-inner .card-text p {
   font-size: 1rem;
